@@ -1,0 +1,98 @@
+.register {
+    .left,
+    .right {
+      input {
+        border: none;
+        border-bottom: 5px solid;
+        border-image-source: linear-gradient(
+          180deg,
+          #ae18e2 0%,
+          rgba(0, 0, 0, 0) 100%
+        );
+        border-image-slice: 30;
+        width: 428px;
+        height: 36px;
+        margin-top: 26px;
+        margin-bottom: 5px;
+        padding-bottom: 3px;
+        @include text($fs4, $fw4, $color1, $lh3);
+  
+        &:focus {
+          outline: none;
+        }
+      }
+  
+      span {
+        @include text($fs2, $fw4, $color19, $lh1);
+      }
+    }
+  
+    li {
+      list-style: none;
+      margin-right: 28.54px;
+      position: relative;
+  
+      label {
+        @include text($fs4, $fw4, $color1, $lh3);
+      }
+  
+      span {
+        @include text($fs2, $fw4, $color19, $lh1);
+        position: absolute;
+        width: 540px;
+        top: 55px;
+        left: 0px;
+      }
+  
+      input {
+        appearance: none;
+        position: absolute;
+        border-radius: 50%;
+        width: 65.42px;
+        height: 50px;
+        left: -70px;
+        z-index: 10;
+  
+        &:checked + .check::before {
+          opacity: 1;
+        }
+      }
+    }
+  
+    .check {
+      position: absolute;
+      display: block;
+      background-color: $color17;
+      border-radius: 50%;
+      width: 65.42px;
+      height: 50px;
+      top: -5px;
+      left: -70px;
+      transition: all 0.25s linear;
+  
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: $color18;
+        border-radius: 50%;
+        width: 39.25px;
+        height: 30px;
+        top: 9px;
+        left: 13px;
+        opacity: 0;
+        transition: all 0.25s linear;
+      }
+    }
+  
+    button {
+      width: 291px;
+      height: 50px;
+      border: transparent;
+      @include text($fs4, $fw4, $color3, $lh7);
+      background-color: $color18;
+      margin-bottom: 40px;
+      margin-top: 85px;
+    }
+  }
+  

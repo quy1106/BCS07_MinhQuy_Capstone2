@@ -1,0 +1,8 @@
+.title {
+    text-align: center;
+    padding-bottom: 81px;
+
+    h2 {
+        @include text($fs5, $fw4, $color1, $lh3);
+    }
+}

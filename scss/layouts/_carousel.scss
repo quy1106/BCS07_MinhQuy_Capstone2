@@ -1,0 +1,264 @@
+.carousel {
+    padding-top: $pd1;
+    padding-bottom: 30px;
+    .carousel-control-prev,
+    .carousel-control-next {
+      background: transparent;
+      border: none;
+  
+      .polygon-1 {
+        position: absolute;
+        left: 40px;
+        top: 270px;
+      }
+  
+      .polygon-2 {
+        position: absolute;
+        right: 40px;
+        top: 270px;
+      }
+    }
+  
+    .carousel-indicators {
+      li {
+        @include size(15px, 15px);
+        margin-right: 23px;
+        margin-bottom: 72px;
+        border-radius: 50%;
+        border: 1px solid rgba(0, 0, 0, 0.13);
+      }
+    }
+    #renderCarousel {
+      height: 530px;
+      background-image: url(/img/image6.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: bottom;
+      // overflow: hidden;
+      .active {
+        // height: 530px;
+        // background-image: url(/assets/img/image\ 6.png);
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        // background-position: bottom;
+        // overflow: hidden;
+  
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+  
+        transition: all 0.1s;
+  
+        .carousel__left {
+          width: 50%;
+  
+          img {
+            // width: 100vh;
+            padding-left: 122px;
+            padding-bottom: 140px;
+            object-fit: cover;
+          }
+        }
+  
+        .carousel__right {
+          width: 40%;
+          padding-bottom: 140px;
+          padding-left: 130px;
+  
+          h2 {
+            @include text($fs5, $fw3, $color1, $lh4);
+          }
+  
+          p {
+            @include text($fs2, $fw3, $color1, $lh1);
+            margin-bottom: 35px;
+          }
+  
+          a {
+            @include text($fs2, $fw3, $color3, $lh1);
+            text-decoration: none;
+            padding: 13px 35px 13px 35px;
+            background-color: $color8;
+  
+            &:hover,
+            :focus {
+              background-color: $color10;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  /**---------------RESPONSIVE--------------------**/
+  
+  // @media screen and (min-width:768px) and  (max-width:1200px) {
+  
+  //     .carousel {
+  //         #carouselCapstone {
+  //             .carousel-item.active {
+  //                 height: 30vh;
+  
+  //                 .carousel-control-prev,
+  //                 .carousel-control-next {
+  
+  //                     .polygon-1,
+  //                     .polygon-2 {
+  
+  //                         left: 40px;
+  //                         top: 60%;
+  //                     }
+  
+  //                 }
+  //             }
+  //         }
+  //     }
+  // }
+  
+  @media screen and (max-width:1199.98px) {
+    .carousel {
+      #carouselCapstone {
+        .carousel-control-prev,
+        .carousel-control-next {
+          .polygon-1 {
+            left: 20px;
+            top: 30vh;
+          }
+  
+          .polygon-2 {
+            right: 20px;
+            top: 30vh;
+          }
+        }
+  
+        .carousel-item.active {
+          height: 60vw;
+  
+          .carousel__left {
+            img {
+              // width: 80vh;
+              padding-left: 0;
+            }
+          }
+  
+          .carousel__right {
+            width: 40vw;
+            margin-left: 20px;
+  
+            h2 {
+              @include text($fs7, $fw3, $color1, $lh4);
+            }
+  
+            p {
+              @include text($fs6, $fw3, $color1, $lh1);
+              margin-bottom: 35px;
+            }
+  
+            a {
+              @include text($fs6, $fw3, $color3, $lh1);
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width:921.98px) {
+    .carousel {
+      #carouselCapstone {
+        .carousel-control-prev,
+        .carousel-control-next {
+          .polygon-1 {
+            left: 20px;
+            top: 50vh;
+            width: 30px;
+          }
+  
+          .polygon-2 {
+            right: 20px;
+            top: 50vh;
+            width: 30px;
+          }
+        }
+  
+        .carousel-item.active {
+          height: 60vw;
+  
+          .carousel__left {
+              img {
+                  width: 50vw;
+              }
+          }
+  
+          .carousel__right {
+            width: 30vw;
+            margin-left: 20px;
+            padding-left: 0;
+        
+  
+            h2 {
+              margin-bottom: 0;
+            }
+  
+            p {
+              margin-bottom: 2em;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width:575.98px) {
+    .carousel {
+      #carouselCapstone {
+        .carousel-control-prev,
+        .carousel-control-next {
+          .polygon-1 {
+            left: 20px;
+            top: 25vh;
+          }
+  
+          .polygon-2 {
+            right: 20px;
+            top: 25vh;
+          }
+        }
+  
+        .carousel-item.active {
+          height: 90vw;
+  
+          
+          .carousel__left {
+            img {
+              width: 40vh;
+              margin-bottom: 0;
+            }
+          }
+  
+          .carousel__right {
+            width: 30vw;
+            margin-bottom: 0;
+            padding-left: 0;
+  
+            h2 {
+              margin-bottom: 10px;
+              line-height: 20px;
+
+            }
+  
+            p {
+              margin-bottom: 10px;
+              line-height: 20px;
+
+            }
+  
+            a {
+              padding: 7px 10px 7px 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+  

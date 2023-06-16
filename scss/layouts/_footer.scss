@@ -1,0 +1,47 @@
+footer {
+    margin-top: 40px;
+    // background-image: url(/assets/img/image\ 7.png);
+    // background-repeat: no-repeat;
+    // background-size: cover;
+
+    .footer__top {
+        background-color: $color5;
+
+        .footer__item:nth-child(2),
+        .footer__item:last-of-type {
+            border-left: 1px solid $color6;
+        }
+
+        h3 {
+            @include text($fs2, $fw6, $color1, $lh1);
+        }
+
+        li {
+            list-style: none;
+            @include text($fs9, $fw4, $color1, $lh1);
+
+            span {
+                @include text($fs9, $fw4, $color19, $lh1);
+                cursor: pointer;
+            }
+        }
+    }
+
+    .footer__bottom {
+        background-color: $color6;
+
+        h3 {
+            @include text($fs2, $fw6, $color1, $lh1);
+        }
+
+        li {
+            list-style: none;
+            @include text($fs9, $fw4, $color1, $lh1);
+
+            span {
+                @include text($fs9, $fw4, $color19, $lh1);
+                cursor: pointer;
+            }
+        }
+    }
+}
